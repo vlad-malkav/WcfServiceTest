@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using WcfServiceTest.BDD.EF6;
 
 namespace WcfServiceTest
 {
@@ -24,7 +25,7 @@ namespace WcfServiceTest
         }
 
         [WebMethod]
-        public string Test(int id)
+        public string TestSimple(int id)
         {
             return BddAccessTest.TestSimple(id);
         }
@@ -33,6 +34,21 @@ namespace WcfServiceTest
         public string TestComplet(int id, string data1, string data2, string data3)
         {
             return BddAccessTest.TestComplet(id, data1, data2, data3);
+        }
+
+        [WebMethod]
+        public string TestEF6()
+        {
+            string result = "";
+            using (var context = new DbEntities())
+            {
+                var objetsTest = context.ObjetsTest.ToList();
+                foreach (var objetTest in objetsTest)
+                {
+                    result += objetTest.Id + " / " + objetTest.Data1 + " / " + objetTest.Data2 + " / " + objetTest.Data3 + " ||";
+                }
+            }
+            return result;
         }
     }
 }
