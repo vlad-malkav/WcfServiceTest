@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceTest", "WcfServiceTest\WcfServiceTest.csproj", "{4E991514-1A9F-4F9C-A9AA-458F449D0F92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlTest", "MySqlTest\MySqlTest.csproj", "{6107C878-CE02-4E09-907C-A7D497B1CD0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkTest", "EntityFrameworkTest\EntityFrameworkTest.csproj", "{42320B23-C3AB-4834-BBA3-C2A1221A910D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4E991514-1A9F-4F9C-A9AA-458F449D0F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E991514-1A9F-4F9C-A9AA-458F449D0F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E991514-1A9F-4F9C-A9AA-458F449D0F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6107C878-CE02-4E09-907C-A7D497B1CD0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6107C878-CE02-4E09-907C-A7D497B1CD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6107C878-CE02-4E09-907C-A7D497B1CD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6107C878-CE02-4E09-907C-A7D497B1CD0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42320B23-C3AB-4834-BBA3-C2A1221A910D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42320B23-C3AB-4834-BBA3-C2A1221A910D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42320B23-C3AB-4834-BBA3-C2A1221A910D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42320B23-C3AB-4834-BBA3-C2A1221A910D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,9 +1,12 @@
-﻿using System;
+﻿using EntityFrameworkTest;
+using MySqlTest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
-using WcfServiceTest.BDD.EF6;
+using EntityFrameworkTest.DAL;
+using EntityFrameworkTest.Models;
 
 namespace WcfServiceTest
 {
@@ -40,12 +43,12 @@ namespace WcfServiceTest
         public string TestEF6()
         {
             string result = "";
-            using (var context = new DbEntities())
+            using (var context = new AlwaysdataDbContext())
             {
-                var objetsTest = context.ObjetsTest.ToList();
-                foreach (var objetTest in objetsTest)
+                List<Student> students = context.Students.ToList();
+                foreach (Student student in students)
                 {
-                    result += objetTest.Id + " / " + objetTest.Data1 + " / " + objetTest.Data2 + " / " + objetTest.Data3 + " ||";
+                    result += student.ID + " / " + student.FirstMidName + " / " + student.LastName + " ||";
                 }
             }
             return result;
